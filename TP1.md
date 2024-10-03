@@ -127,70 +127,53 @@ Address:  143.90.88.12
 ☀️ Hop hop hop
 Déterminer...
 
+```
+PS C:\Users\vince> tracert www.ynov.com
 
+Détermination de l’itinéraire vers www.ynov.com [172.67.74.226]
+avec un maximum de 30 sauts :
+
+  1     2 ms     2 ms     2 ms  10.33.79.254
+  2     2 ms     2 ms     1 ms  145.117.7.195.rev.sfr.net [195.7.117.145]
+  3     7 ms     2 ms     2 ms  237.195.79.86.rev.sfr.net [86.79.195.237]
+  4     3 ms     3 ms     2 ms  196.224.65.86.rev.sfr.net [86.65.224.196]
+  5    13 ms    10 ms    10 ms  164.147.6.194.rev.sfr.net [194.6.147.164]
+  6     *        *        *     Délai d’attente de la demande dépassé.
+  7     *        *        *     Délai d’attente de la demande dépassé.
+  ☀️8☀️    25 ms    16 ms    15 ms  172.67.74.226
+```
+
+Itinéraire déterminé.
+PS C:\Users\vince>
 
 
 ☀️ IP publique
 Déterminer...
 
-l'adresse IP publique de la passerelle du réseau (le routeur d'YNOV donc si vous êtes dans les locaux d'YNOV quand vous faites le TP)
-
+```
+PS C:\Users\vince> (Invoke-WebRequest ifconfig.me/ip).Content
+195.7.117.146
+```
 
 III. Le requin
-Faites chauffer Wireshark. Pour chaque point, je veux que vous me livrez une capture Wireshark, format .pcap donc.
-Faites clean 🧹, vous êtes des grands now :
-
-livrez moi des captures réseau avec uniquement ce que je demande et pas 40000 autres paquets autour
-
-vous pouvez sélectionner seulement certains paquets quand vous enregistrez la capture dans Wireshark
-
-
-stockez les fichiers .pcap dans le dépôt git et côté rendu Markdown, vous me faites un lien vers le fichier, c'est cette syntaxe :
-
-
-[Lien vers capture ARP](./captures/arp.pcap)
-
-
 
 ☀️ Capture ARP
 
-
-📁 fichier arp.pcap
-
-capturez un échange ARP entre votre PC et la passerelle du réseau
-vous pouvez vider votre table ARP à l'aide d'une commande, pour forcer l'échange ARP
-
-
-En bref rappel : pour communiquer avec quelqu'un sur un LAN, il faut connaître son adresse MAC. Vous avez tout le temps besoin de communiquer avec le routeur, car c'est lui qui fait passer vos paquets vers internet. Il est donc nécessaire d'apprendre l'adresse MAC du routeur. Votre PC fait un échange ARP pour apprendre la MAC de quelqu'un sur son LAN, comme le routeur.
-
+```
+voir "Capture arp.pcapng"
+```
 
 ☀️ Capture DNS
-
-
-📁 fichier dns.pcap
-
-capturez une requête DNS vers le domaine de votre choix et la réponse
-vous effectuerez la requête DNS en ligne de commande
-
+```
+voir: capture DNS.pcapng
+```
 
 ☀️ Capture TCP
 
 
 📁 fichier tcp.pcap
 
-effectuez une connexion qui sollicite le protocole TCP
-je veux voir dans la capture :
-
-un 3-way handshake
-un peu de trafic
-la fin de la connexion TCP
+voir: "capture tcp.pcapng"
 
 
 
-
-TCP est le protocole qu'on va trouver DANS les paquets IP. Un paquet IP achemine le message jusqu'à une certaine machine, qui peut ouvrir le paquet IP afin de voir un message TCP. Le contenu du message TCP (une requête HTTP par exemple) est alors envoyé à une application (un serveur web par exemple) pour qu'elle traite le contenu.
-
-
-
-
-Je sais que je vous l'ai déjà servi l'an dernier lui, mais j'aime trop ce meme hihi 🐈
