@@ -8,3 +8,5 @@ def print_it_please(packet):
                     print(f"DNS Answer : {answer.rdata}")
 
 sniff(filter="port 53", prn=print_it_please, count=2)
+
+

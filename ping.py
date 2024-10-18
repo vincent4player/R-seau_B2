@@ -11,3 +11,5 @@ final_frame = frame/packet/ping
 answers, unanswered_packets = srp(final_frame, timeout=10)
 
 print(f"Pong reçu : {answers[0]}")
+
+
