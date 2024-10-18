@@ -2,7 +2,7 @@ import scapy.all as scapy
 
 def get_mac(ip):
     request = scapy.ARP(pdst=ip)
-    broadcast = scapy.Ether(dst="30:89:4A:D2:5A:AA")
+    broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     final_packet = broadcast / request
     answer = scapy.srp(final_packet, timeout=2, verbose=False)[0]
     mac = answer[0][1].hwsrc
