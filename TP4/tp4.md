@@ -36,6 +36,11 @@ PS D:\Reseau-Linux\R-seau_B2>
 
 🌞 dns_lookup.py
 
+```
+PS D:\Reseau-Linux\R-seau_B2> python .\dns_lookup.py
+DNS Ans 172.67.74.226
+PS D:\Reseau-Linux\R-seau_B2>
+```
 
 🌞 arp_poisoning.py
 

