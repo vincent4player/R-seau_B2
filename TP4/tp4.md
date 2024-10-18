@@ -19,7 +19,15 @@ PS D:\Reseau-Linux\R-seau_B2>
 
 🌞 tcp_cap.py
 
-
+```
+PS D:\Reseau-Linux\R-seau_B2> python .\tcp_cap.py
+TCP SYN ACK reçu !
+- Adresse IP src : 140.82.112.26
+- Adresse IP dest : 10.33.73.77
+- Port TCP src : 443
+- Port TCP dst : 50414
+PS D:\Reseau-Linux\R-seau_B2>
+```
 
 🌞 dns_cap.py
 
