@@ -31,8 +31,14 @@ PS D:\Reseau-Linux\R-seau_B2>
 
 🌞 dns_cap.py
 
-
-
+```
+PS D:\Reseau-Linux\R-seau_B2> python .\tcp_cap.py dns_cap.py 
+Begin emission:
+Finished sending 1 packets.
+...*
+Received 4 packets, got 1 answers, remaining 0 packets
+104.26.10.233
+```
 
 🌞 dns_lookup.py
 
@@ -47,9 +53,13 @@ PS D:\Reseau-Linux\R-seau_B2>
 
 🌞 icmp_exf_send.py
 
-
+PS D:\Reseau-Linux\R-seau_B2> python .\icmp_exf_send.py  10.33.73.72 j
+.
+Sent 1 packets.
 
 
 🌞 icmp_exf_receive.py
 
-
+PS D:\Reseau-Linux\R-seau_B2> python .\icmp_exf_receive.py  10.33.73.72 yoyo
+.
+Sent 1 packets.
