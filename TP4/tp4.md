@@ -53,13 +53,16 @@ PS D:\Reseau-Linux\R-seau_B2>
 
 🌞 icmp_exf_send.py
 
+```
 PS D:\Reseau-Linux\R-seau_B2> python .\icmp_exf_send.py  10.33.73.72 j
 .
 Sent 1 packets.
-
+```
 
 🌞 icmp_exf_receive.py
 
+```
 PS D:\Reseau-Linux\R-seau_B2> python .\icmp_exf_receive.py  10.33.73.72 yoyo
 .
 Sent 1 packets.
+```
