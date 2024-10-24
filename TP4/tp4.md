@@ -58,6 +58,9 @@ PS D:\Reseau-Linux\R-seau_B2> python .\icmp_exf_send.py  10.33.73.72 j
 .
 Sent 1 packets.
 ```
+```
+voir wireshark
+```
 
 🌞 icmp_exf_receive.py
 
