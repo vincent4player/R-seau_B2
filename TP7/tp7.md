@@ -213,7 +213,7 @@ vincent@10.7.2.12's password:
 
 ```
 [vincent@bastion ~]$ ssh -J 10.7.2.12 10.7.2.13
-vicnent@10.7.2.12's password: 
+vincent@10.7.2.12's password: 
 vincent@10.7.2.13's password: 
 Last login: Mon Nov 26 17:44:25 2024 from 10.7.2.1
 [vincent@web ~]$ 
@@ -252,7 +252,7 @@ The key's randomart image is:
 [vincent@web ~]$ sudo cat /etc/ssh/sshd_config | grep Listen
 ListenAddress 10.7.2.1
 [vicnent@web ~]$ sudo systemctl restart sshd
-PS C:\Users\vince> ssh vicnent@10.7.1.13
+PS C:\Users\vince> ssh vincent@10.7.1.13
 ssh: connect to host 10.7.1.13 port 22: Connection timed out
 
 🌞 Améliorer le niveau de sécurité du serveur
@@ -313,7 +313,7 @@ iptables -L -v -n
 🌞 Accéder au site web
 
 ```
-PS C:\Users\vince> curl 10.7.2.114
+PS C:\Users\vince> curl 10.7.2.13
 <h1>toto</h1>
 ```
 
